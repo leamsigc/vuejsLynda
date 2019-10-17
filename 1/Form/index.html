@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vuejs Lynda one</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <form  class="form" v-if='!submitted'>
+                <div class="input-container">
+                    <label for="email">Email:</label>
+                    <!-- <input 
+                        type="email" 
+                        placeholder="Example@example.com"
+                        v-bind:value="email"
+                        > -->
+                    <!-- Two-way data binding  -->
+                    <input 
+                    type="email" 
+                    placeholder="Example@example.com"
+                    v-model='email'
+                    >
+                </div>
+                <button 
+                    class="btn " 
+                    type="submit"
+                    @click.prevent='handleSubmit'
+                    >Submit</button>
+            </form>
+            <div class="thank" v-else>
+                Thank you for subscribing!
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

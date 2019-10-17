@@ -1,0 +1,25 @@
+.container {
+	max-width: 800px;
+	background: #fff;
+	padding: 4rem;
+}
+.content {
+	text-align: center;
+	line-height: 1.5;
+}
+.content h2 {
+	padding: 1rem 0;
+	font-weight: 900;
+	font-size: 2rem;
+}
+.content p {
+	text-align: justify;
+	font-weight: 300;
+	line-height: 1.5;
+}
+.img {
+	max-width: 500px;
+	max-height: 500px;
+	display: inline-block;
+	margin-bottom: 2rem;
+}
