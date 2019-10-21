@@ -49,4 +49,26 @@
   * Encapsulation 
   * Portability
   * Organization
-  
+- [ ] Slots 
+    - The inner html will be inserted for the slot placeholder
+    - Default content for ```<slot><p>Default content here </p></slot>```
+    - More than one slot available need a name attribute to identify them ``` name='name'```  
+    ``` javascript
+    //in the component we need to declare the slot and a name attribute for it 
+    <slot name='title'>default content here</slot>
+    //to use the slot we need to declare the slot name attribute in out markup 
+    <h1 slot='title'>slot content here </h1>
+
+
+    ```
+    - If we want to access the prop inn the slot we need declared  or pass the prop that we want to use to the slot is a dynamic property example ``` <slot name='title' :propName='propName' ></slot> ``` to access our props from the template  
+  ``` javascript 
+  <custom-component date='2019-08-09' > 
+    //title  date is still in the scope of the root instance 
+    <h1 slot='title'>the date is {{date}} </h1>
+    //to be able to access the  date thats passed to the slot we need to use name ,like a name space - slot scope attribute
+    <h1 slot='title' slot-scope='image'>The date is {{image.date}}</h1>
+
+
+  </custom-component>
+  ```

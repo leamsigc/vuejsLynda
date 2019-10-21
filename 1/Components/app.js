@@ -13,8 +13,12 @@ let anotherComponent = {
 //Simple component
 Vue.component('a-pod', {
 	template: `<div>
-	<p>Date: {{date}}</p>
-	<img :src='imgSrc' :title='imgTitle'>
+	<slot></slot>
+	<img
+	width='300'
+	height='200'
+	:src='imgSrc' 
+	:title='imgTitle'>
 	
 	</div>
 	`,
