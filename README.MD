@@ -27,3 +27,26 @@
         }
      ```
      so when we refresh  the page really fast the hidden items can't be seen 
+
+- [x] Vue Components
+
+    - Vue instances mounted on custom elements (no el)
+    - Template / markup defined as strings whit template option
+    - The data option is a function (not an object)
+  
+``` javascript
+ Vue.component('example-component',{
+     template:`<div>Useless component #{{sku}}</div>`,
+     data:()=>({
+         sku:'C342w8'
+     })
+ });
+```
+
+
+- [ ] Why use Vue Components 
+  * Reusability 
+  * Encapsulation 
+  * Portability
+  * Organization
+  

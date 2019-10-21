@@ -17,11 +17,11 @@
                 Loading ...
             </div>
             <div class="content" v-else>
-                <ul>
-                    <li v-for='item in asteroids'>
-                        {{item.name}}
-                    </li>
-                </ul>
+                <a-pod date='2019-08-07'></a-pod>
+                <another-component></another-component>
+                <list-component v-for='i in 100'>
+                    {{i}}
+                </list-component>
             </div>
         </div>
     </div>
