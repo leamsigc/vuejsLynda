@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vuejs Lynda one</title>
+    <title>Vuejs Lynda api call</title>
     <link rel="stylesheet" href="../../reset.css">
     <link rel="stylesheet" href="app.css">
 </head>
@@ -19,13 +19,12 @@
                 Loading ...
             </div>
             <div class="content" v-else >
-                <h2 class="title">{{title}}</h2>
-                <img 
-                    :src='imgUrl' 
-                    :alt='title'
-                    :title='title' 
-                    class="img">
-                <p>{{explanation}}</p>
+                <ul>
+                    <li 
+                    v-for='item in asteroids'>
+                    {{item.name}}
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
